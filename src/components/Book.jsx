@@ -122,6 +122,8 @@ const Page = ({ number, front, back, page, opened, bookClosed, ...props }) => {
     }
     const skeleton = new Skeleton(bones);
 
+    //Here I made a change to the roughness of every other page
+
     const materials = [
       ...pageMaterials,
       new MeshStandardMaterial({
@@ -132,7 +134,7 @@ const Page = ({ number, front, back, page, opened, bookClosed, ...props }) => {
               roughnessMap: pictureRoughness,
             }
           : {
-              roughness: 0.1,
+              roughness: 0.6,
             }),
         emissive: emissiveColor,
         emissiveIntensity: 0,
