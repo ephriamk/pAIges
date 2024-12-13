@@ -15,7 +15,7 @@ function App() {
           position: [-0.5, 1, window.innerWidth > 800 ? 4 : 9],
           fov: 45,
         }}>
-        <Environment files="./hdri/outer2.hdr" background/>
+        <Environment files="./src/hdri/outer2.hdr" background/>
         <group position-y={0}>
           <Suspense fallback={null}>
             <Experience />
