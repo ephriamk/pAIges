@@ -1,0 +1,136 @@
+/* BODY STYLE */
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: "Orbitron", Arial, sans-serif; /* Space-themed font */
+  }
+  
+  /* LOADING OVERLAY */
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, #0a0b1e 60%, #000010 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10000;
+    color: white;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+  }
+  
+  /* FADE OUT */
+  .loading-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* STARS BACKGROUND */
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    animation: move-stars 20s linear infinite;
+  }
+  
+  /* ANIMATED STAR MOVEMENT */
+  @keyframes move-stars {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -1000px -1000px;
+    }
+  }
+  
+  /* CONTENT STYLING */
+  .content {
+    z-index: 2;
+    text-align: center;
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px #ffffff, 0px 0px 20px #ff9bff;
+    animation: pulse 2s infinite;
+  }
+  
+  p {
+    font-size: 1.5rem;
+    margin: 0 0 2rem;
+    color: #d1d1e8;
+    text-shadow: 0px 0px 5px #5555ff;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      text-shadow: 0px 0px 10px #ffffff, 0px 0px 20px #ff9bff;
+    }
+    50% {
+      text-shadow: 0px 0px 15px #ff9bff, 0px 0px 25px #ffffff;
+    }
+  }
+  
+  /* LOADING ANIMATION */
+  .loading-indicator {
+    width: 80px;
+    height: 80px;
+    border: 10px solid rgba(255, 255, 255, 0.2);
+    border-top: 10px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* EXPLORE BUTTON */
+  .explore-button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(90deg, #ff0080, #4444ff);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #ff0080, 0px 0px 20px #4444ff;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .explore-button:hover {
+    background: linear-gradient(90deg, #4444ff, #ff0080);
+    box-shadow: 0px 0px 20px #ffffff, 0px 0px 30px #ff0080;
+  }
+  
+  
